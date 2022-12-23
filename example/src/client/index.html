@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="full-size">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Upload largest file - example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" media="screen" href="main.css" />
+		<script src="upload-largest-files.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body class="full-size flex-center">
+		<div class="upload-container">
+			<div class="flex-center">
+				<input type="file" name="file" id="file" class="input-file" />
+				<label for="file" class="label-upload-container">
+					<div>
+						<span class="label-browse">Browse</span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<progress value="0" max="100" class="progress"></progress>
+		<div class="label-upload-successfully label-upload-successfully-pulsate">
+			Upload successfully
+		</div>
+	</body>
+</html>
