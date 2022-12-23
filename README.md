@@ -8,8 +8,6 @@ This is a simple lib to upload large files.
 
 ## Demo
 
-https://raw.githubusercontent.com/emirdeliz/upload-largest-files/master/assets/demo-merge.gif
-
 <img src="https://raw.githubusercontent.com/emirdeliz/upload-largest-files/master/docs/demo.gif" width="700" height="auto" alt="Upload Largest Files - example"/>
 
 ## How to use??
