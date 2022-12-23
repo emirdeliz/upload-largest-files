@@ -12,16 +12,16 @@ https://raw.githubusercontent.com/emirdeliz/upload-largest-files/master/assets/d
 
 <img src="https://raw.githubusercontent.com/emirdeliz/upload-largest-files/master/docs/demo.gif" width="700" height="auto" alt="Upload Largest Files - example"/>
 
-## How use?
+## How to use??
 
 ```javascript
 const file = <file to upload>
 const url = <endpoint>;
 const onProgress = <progress callback>
 const result = await window.uploadLargestFiles.uploadFile({
-	file,
-	url,
-	onProgress,
+  file,
+  url,
+  onProgress,
 });
 ```
 
