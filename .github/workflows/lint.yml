@@ -1,0 +1,12 @@
+name: Lint
+on: [push]
+jobs:
+  lint:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: ./.github/actions
+      - run: yarn lint:check

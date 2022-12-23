@@ -1,0 +1,10 @@
+runs:
+  using: 'composite'
+
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+        cache: yarn
+    - run: yarn install
+      shell: sh
