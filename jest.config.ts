@@ -5,20 +5,21 @@
 import type { Config } from 'jest';
 
 const config = {
-	transform: {
-		'^.+\\.(t|j)s?$': '@swc/jest',
-	},
+	preset: 'ts-jest',
+	testEnvironment: 'jsdom',
 	testMatch: ['<rootDir>/src/test/**/*.test.ts'],
 	modulePathIgnorePatterns: ['<rootDir>/dist', '<rootDir>/node_modules'],
 	// moduleNameMapper: {
 	// 	XMLHttpRequest$: '<rootDir>/src/test/__mocks__/XMLHttpRequest.ts',
 	// },
-	globals: {
-		'ts-jest': {
-			isolatedModules: true,
-		},
+	transform: {
+		'^.+\\.[tj]sx?$': [
+			'ts-jest',
+			{
+				isolatedModules: true,
+			},
+		],
 	},
-	testEnvironment: 'jsdom',
 } as Config;
 
 export default config;
