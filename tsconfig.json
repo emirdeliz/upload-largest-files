@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"lib": ["dom", "es2022"],
+		"allowJs": true,
+		"rootDir": ".",
+		"outDir": "dist",
+		"removeComments": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"emitDeclarationOnly": false,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["src/upload-largest-files.ts"],
+	"exclude": ["node_modules", "dist"]
+}

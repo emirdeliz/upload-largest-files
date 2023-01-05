@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+		"declaration": true,
+		"outFile": "./dist/barcode-reader.d.ts",
+  },
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}
