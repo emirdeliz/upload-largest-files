@@ -2,7 +2,6 @@
 	"name": "upload-largest-files",
 	"version": "1.0.0",
 	"description": "Upload largest files",
-	"type": "commonjs",
 	"types": "dist/upload-largest-files.d.ts",
 	"moduleResolution": "node",
 	"exports": "./dist/upload-largest-files.js",

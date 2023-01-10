@@ -18,7 +18,6 @@ export async function uploadFile({
 
 	const method = 'POST';
 	xhr.open(method, url);
-	xhr.setRequestHeader('X-FILENAME', file.name);
 
 	headers &&
 		Object.keys(headers || {}).forEach(function (key) {
