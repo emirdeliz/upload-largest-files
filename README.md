@@ -10,7 +10,7 @@ This is a simple lib to upload large files.
 
 <img src="https://raw.githubusercontent.com/emirdeliz/upload-largest-files/master/docs/demo.gif" width="700" height="auto" alt="Upload Largest Files - example"/>
 
-## How to use??
+## How to use?
 
 ```javascript
 const file = <file to upload>
