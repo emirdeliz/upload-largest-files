@@ -24,7 +24,7 @@ function onProgress(e) {
 async function makeUpload(e) {
 	const file = e.target.files[0];
 	const url = '/upload';
-	const result = await window.uploadLargestFiles.uploadFile({
+	const result = await window.UploadLargestFiles.uploadFile({
 		file,
 		url,
 		onProgress,
