@@ -1,41 +1,49 @@
+export enum HttpMethod {
+  POST = "POST",
+  GET = "GET",
+  PUT = "PUT",
+  PATCH = "PATCH",
+}
+
 interface UploadProps {
-	file: File;
-	url: string | URL;
-	headers?: { [key: string]: string };
-	onProgress?: ((this: XMLHttpRequest, e: ProgressEvent) => void) | null;
+  file: File;
+  url: string | URL;
+  httpMethod?: HttpMethod;
+  headers?: { [key: string]: string };
+  onProgress?: ((this: XMLHttpRequest, e: ProgressEvent) => void) | null;
 }
 
 export async function uploadFile({
-	file,
-	url,
-	headers,
-	onProgress,
+  file,
+  url,
+  headers,
+  httpMethod,
+  onProgress,
 }: UploadProps) {
-	const xhr = new XMLHttpRequest();
-	if (onProgress) {
-		xhr.upload.onprogress = onProgress;
-	}
+  const xhr = new XMLHttpRequest();
+  if (onProgress) {
+    xhr.upload.onprogress = onProgress;
+  }
 
-	const method = 'POST';
-	xhr.open(method, url);
+  const method = httpMethod || HttpMethod.POST;
+  xhr.open(method, url);
 
-	headers &&
-		Object.keys(headers || {}).forEach(function (key) {
-			xhr.setRequestHeader(key, headers[key]);
-		});
+  headers &&
+    Object.keys(headers || {}).forEach(function (key) {
+      xhr.setRequestHeader(key, headers[key]);
+    });
 
-	const formdata = new FormData();
-	formdata.append('file', file);
+  const formData = new FormData();
+  formData.append("file", file);
 
-	return new Promise<File>(function (resolve, reject) {
-		try {
-			xhr.send(formdata);
-			xhr.onloadend = function () {
-				resolve(file);
-			};
-			!xhr.onloadend && resolve(file);
-		} catch (e) {
-			reject(e);
-		}
-	});
+  return new Promise<File>(function (resolve, reject) {
+    try {
+      xhr.onloadend = function () {
+        resolve(file);
+      };
+      xhr.send(formData);
+    } catch (e) {
+      reject(e);
+    }
+  });
 }
