@@ -1,6 +1,6 @@
 {
 	"name": "upload-largest-files",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Upload largest files",
 	"types": "dist/upload-largest-files.d.ts",
 	"moduleResolution": "node",
