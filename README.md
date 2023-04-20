@@ -27,8 +27,9 @@ const result = await window.uploadLargestFiles.uploadFile({
 
 ##### About the parameters:
 
-| **Parameter**  | **Type** | **Description**                             |
-| -------------- | -------- | ------------------------------------------- |
-| **file**       | File     | The file to upload.                         |
-| **url**        | string   | The server url to make upload.              |
-| **onProgress** | string   | The callback to follow the upload progress. |
+| **Parameter**  | **Type**           | **Description**                              |
+| -------------- | ------------------ | -------------------------------------------- |
+| **file**       | File               | The file to upload.                          |
+| **url**        | string             | The server url to make upload.               |
+| **httpMethod** | POST,GET,PUT,PATCH | The method to make upload (POST is default). |
+| **onProgress** | string             | The callback to follow the upload progress.  |
